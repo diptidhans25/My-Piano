@@ -1,0 +1,165 @@
+html {
+  font-family: "Noto Serif", serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+
+video#bgvid {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+
+header {
+  position: relative;
+  margin: 20px 0;
+}
+
+header:after {
+  content: "";
+  width: 460px;
+  height: 10px;
+  /* background: url(images/intro-div.svg) no-repeat center; */
+  display: inline-block;
+  text-align: center;
+  background-size: 70%;
+}
+
+h1 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2,
+h3,
+h4 {
+  color: #fff;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 30px;
+}
+
+.nowplaying {
+  font-size: 86px;
+  line-height: 1;
+  color: #eee;
+  text-shadow: 0 0 5rem #7b7be7;
+  transition: all 0.07s ease;
+  min-height: 60px;
+}
+
+.keys {
+  display: block;
+  width: 100%;
+  height: 350px;
+  max-width: 880px;
+  position: relative;
+  margin: 40px auto 0;
+  cursor: none;
+}
+
+.key {
+  position: relative;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  transition: all 0.07s ease;
+  display: block;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.white {
+  float: left;
+  width: 10%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.sharp {
+  position: absolute;
+  width: 6%;
+  height: 60%;
+  background-color: #000;
+  color: #eee;
+  top: 0;
+  z-index: 3;
+}
+
+.key[data-key="87"] {
+  left: 7%;
+}
+
+.key[data-key="69"] {
+  left: 17%;
+}
+
+.key[data-key="84"] {
+  left: 37%;
+}
+
+.key[data-key="89"] {
+  left: 47%;
+}
+
+.key[data-key="85"] {
+  left: 57%;
+}
+
+.key[data-key="79"] {
+  left: 77%;
+}
+
+.key[data-key="80"] {
+  left: 87%;
+}
+
+.playing {
+  transform: scale(0.95);
+  border-color: #1e81c9;
+  box-shadow: 0 0 1rem #c0e0f7;
+}
+
+.hints {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  bottom: 7px;
+  transition: opacity 0.3s ease-out;
+  font-size: 20px;
+}
+
+.keys:hover .hints {
+  opacity: 1;
+}
+
+#darkButton {
+  background: rgb(172, 172, 172);
+  padding: 10px;
+  cursor: pointer;
+}
+
+#whiteButton {
+  background-color: rgb(228, 224, 224);
+  padding: 10px;
+  cursor: pointer;
+}
+.changeSharpColor {
+  background-color: rgba(26, 5, 71, 0.932);
+}
+
+.changeWhiteColor {
+  background-color: rgb(216, 219, 228);
+}
